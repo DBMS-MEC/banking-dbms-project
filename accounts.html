@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accounts</title>
+    <style>
+        
+         body {
+            background-color: #f4f4f4;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(to right, #4e54c8, #8f94fb);
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 2;
+        }
+
+        nav {
+            background: linear-gradient(to right, #667eea, #764ba2);
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 220px;
+            z-index: 1;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: #5a67d8;
+        }
+
+        .dashboard-content {
+            padding: 25px;
+			flex: 1;
+            background-color: #fff;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            margin: 30px;
+        }
+
+        button {
+            background: linear-gradient(to right, #4e54c8, #8f94fb);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: linear-gradient(to right, #667eea, #764ba2);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #4e54c8;
+            color: #fff;
+        }
+
+       
+    </style>
+</head>
+</head>
+<body>
+    <header>
+        <h1>Banking Dashboard</h1>
+    </header>
+
+    <div style="display: flex;">
+        <nav>
+            <a href="/dashboard">Home</a>
+            <a href="/transactions">Transactions</a>
+            <a href="/accounts">Accounts</a>
+            <a href="/blacklisted">Blacklisted</a>
+            <button onclick="logout()">Sign Out</button>
+            <button type="button" onclick="Password()">Change Password</button>
+
+        </nav>
+
+    <div class="dashboard-content">
+        <h2>Accounts</h2>
+        <div>
+            <button onclick="addAccount()">Add Account</button>
+        </div>
+        <table id="accountsTable">
+            <thead>
+                <tr>
+                    <th>User ID</th>
+                    <th>Amount</th>
+                    <th>Account Type</th>
+                    <th>Action</th> 
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function logout() {
+           
+            window.location.href = '/login';
+        }
+
+        function addAccount() {
+            const tableBody = document.querySelector('#accountsTable tbody');
+
+            // Create a new row for the account
+            const newRow = document.createElement('tr');
+            newRow.innerHTML = `
+                <td>1004</td>
+                <td>$3000.00</td>
+                <td>Checking</td>
+                <td><button onclick="deleteAccount(this)">Delete</button></td>
+            `;
+
+            // Append the new row to the table
+            tableBody.appendChild(newRow);
+        }
+
+        function deleteAccount(button) {
+            const row = button.parentNode.parentNode;
+            row.parentNode.removeChild(row);
+        }
+    </script>
+</body>
+</html>

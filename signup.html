@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <style>
+        body {
+            background-color: rgb(146, 95, 226);
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+
+        .container h1 {
+            color: #333;
+        }
+
+        .signup-form {
+            margin-top: 20px;
+        }
+
+        input {
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Signup</h1>
+        <div class="signup-form">
+            <form id="signupForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="button" onclick="signup()">Signup</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function signup() {
+            // Get form data
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+    
+            // Create an object with the form data
+            const formData = {
+                username: username,
+                email: email,
+                password: password
+            };
+    
+            // Perform signup logic here
+            fetch('/signup', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Redirect to the dashboard after successful signup
+                    window.location.href = 'dashboard';
+                } else {
+                    console.error('Signup failed:', response.statusText);
+                }
+            })
+            .catch(error => {
+                console.error('Error during signup:', error);
+            });
+        }
+    </script>
+    
+
+</body>
+</html>

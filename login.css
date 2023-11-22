@@ -1,0 +1,312 @@
+.login-container {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+  }
+  .login-login {
+    width: 100%;
+    height: 1024px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 24px;
+    background-color: rgba(146, 95, 226, 1);
+  }
+  .login-vector {
+    top: -106px;
+    left: 1038px;
+    width: 504px;
+    height: 448px;
+    position: absolute;
+  }
+  .login-vector1 {
+    top: 821.3658447265625px;
+    left: 521px;
+    width: 1279px;
+    height: 947px;
+    position: absolute;
+  }
+  .login-vector2 {
+    top: 245px;
+    left: 459px;
+    width: 421px;
+    height: 389px;
+    position: absolute;
+  }
+  .login-vector3 {
+    top: 175px;
+    left: 1263px;
+    width: 217px;
+    height: 200px;
+    position: absolute;
+  }
+  .login-vector4 {
+    top: 87.201416015625px;
+    left: 831px;
+    width: 271px;
+    height: 304px;
+    position: absolute;
+  }
+  .login-vector5 {
+    top: 809.2015380859375px;
+    left: 627px;
+    width: 271px;
+    height: 304px;
+    position: absolute;
+  }
+  .login-frame5 {
+    top: 0px;
+    left: 0px;
+    width: 630px;
+    height: 1024px;
+    display: flex;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 24px 0 0 24px;
+    background-color: rgba(28, 29, 33, 1);
+  }
+  .login-frame10 {
+    gap: 48px;
+    top: 314px;
+    left: 128px;
+    width: 393px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .login-frame9 {
+    gap: 24px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .login-frame8 {
+    gap: 48px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .login-frame6 {
+    gap: 12px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .login-text {
+    color: rgba(255, 255, 255, 1);
+    height: auto;
+    font-size: 48px;
+    font-style: Bold;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 700;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .login-text02 {
+    color: rgba(255, 255, 255, 0.699999988079071);
+    height: auto;
+    font-size: 16px;
+    font-style: Medium;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .login-frame7 {
+    gap: 24px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .login-frame2 {
+    gap: 12px;
+    width: 381px;
+    display: flex;
+    align-items: flex-start;
+    flex-shrink: 0;
+    flex-direction: column;
+  }
+  .login-text04 {
+    color: rgba(255, 255, 255, 0.5);
+    height: auto;
+    font-size: 16px;
+    font-style: Regular;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .login-line1 {
+    width: 381px;
+    height: 1px;
+  }
+  .login-frame3 {
+    gap: 12px;
+    width: 381px;
+    display: flex;
+    align-items: flex-start;
+    flex-shrink: 0;
+    flex-direction: column;
+  }
+  .login-frame13 {
+    gap: 280px;
+    display: flex;
+    align-items: flex-start;
+  }
+  .login-text06 {
+    color: rgba(255, 255, 255, 0.5);
+    height: auto;
+    font-size: 16px;
+    font-style: Regular;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .login-eye-slash-fill {
+    width: 24px;
+    height: 24px;
+  }
+  .login-line2 {
+    width: 381px;
+    height: 1px;
+  }
+  .login-text08 {
+    color: rgba(255, 255, 255, 0.5);
+    height: auto;
+    font-size: 16px;
+    font-style: Regular;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .login-frame1 {
+    gap: 10px;
+    width: 393px;
+    display: flex;
+    padding: 12px 0;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 12px;
+    justify-content: center;
+    background-color: rgba(156, 111, 228, 1);
+  }
+  .login-text10 {
+    color: rgba(255, 255, 255, 1);
+    height: auto;
+    font-size: 16px;
+    font-style: Regular;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .login-frame12 {
+    gap: 12px;
+    top: 155px;
+    left: 730px;
+    width: 566px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .login-text12 {
+    color: rgba(238, 238, 238, 1);
+    height: auto;
+    font-size: 80px;
+    font-style: Bold;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 700;
+    line-height: 70px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .login-text13 {
+    font-weight: 700;
+  }
+  .login-text18 {
+    color: rgba(238, 238, 238, 1);
+    height: auto;
+    font-size: 16px;
+    font-style: Medium;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .login-frame11 {
+    gap: 67px;
+    top: 912px;
+    left: 128px;
+    width: 358px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+  }
+  .login-text20 {
+    color: rgba(255, 255, 255, 0.5);
+    height: auto;
+    font-size: 16px;
+    font-style: Regular;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .login-frame4 {
+    gap: 10px;
+    width: 100px;
+    display: flex;
+    padding: 12px 24px;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 8px;
+    justify-content: center;
+    background-color: rgba(51, 52, 55, 1);
+  }
+  .login-text22 {
+    color: rgba(255, 255, 255, 1);
+    height: auto;
+    font-size: 16px;
+    font-style: Regular;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .login-image110092401copy1 {
+    top: 368px;
+    left: 673px;
+    width: 717px;
+    height: 628px;
+    position: absolute;
+  }
