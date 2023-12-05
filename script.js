@@ -74,24 +74,28 @@ function handleChat() {
 }
 function generateBotResponse(userMessage) {
     // Basic command handling
-    if (userMessage.startsWith('login')) {
-        return 'Sure, let me process your login request.';
-    } else if (userMessage.startsWith('signup')) {
-        return 'Great! I will help you sign up.';
-    } else if (userMessage.startsWith('addtransaction')) {
-        return 'Adding a new transaction. Please provide the details.';
-    } else if (userMessage.startsWith('changepassword')) {
-        return 'Got it! Let\'s change your password.';
-    } else if (userMessage.startsWith('viewtransactions')) {
-        return 'Sure, let me fetch your transactions.';
-    } else if (userMessage.startsWith('addaccount')) {
-        return 'Adding a new account. Please provide the details.';
-    } else if (userMessage.startsWith('deleteaccount')) {
-        return 'Sure, I will delete the specified account.';
-    } else if (userMessage.startsWith('viewblacklisted')) {
-        return 'Fetching information about blacklisted users.';
-    } else if (userMessage.startsWith('addblacklisted')) {
-        return 'Adding a user to the blacklist. Please provide the details.';
+    if (userMessage.includes('fraud detection system work')) {
+        return 'Our fraud detection system employs algorithms that analyze patterns in user behavior, transaction history, and other relevant data to identify potential fraudulent activities and if detected as fraud they areadded to  blacklist.';
+    } else if (userMessage.includes('transactions are fraud')) {
+        return [
+            'Some kinds of transactions that are conidered as fraud if:',
+            '--> transaction amount is considered suspicious or fraudulent. ',
+            '-->if the transaction is occurring on a weekend. ',
+            '-->if multiple transactions occurs within a limited time.',
+            '-->transitions made by accounts tat are already blacklisted.'
+        ].join('\n');
+    } else if (userMessage.includes('change password')) {
+        return[
+            'Sure ,let me guide you through the process.',
+            '-->Login to your account.',
+            '-->In dashboard go to change password',
+            '-->Enter current password and new password',
+            '-->Click change password to change your password'
+        ].join('\n');
+    } else if (userMessage.includes('when fraud is detected')) {
+        return 'When fraudulent activity is identified, the system takes immediate actions, including notifying the user and adding the account to balcklist';
+    } else if (userMessage.includes('add an account')) {
+        return 'Adding a new account. Please provide the details like User Id,Amount and account type';
     } else {
         return 'I\'m sorry, I didn\'t understand that command.';
     }
@@ -170,9 +174,3 @@ const detectFraud = async (amount, date, accountType) => {
 sendChatBtn.addEventListener("click", handleChat);
 closeBtn.addEventListener("click", () => document.body.classList.remove("show-chatbot"));
 chatbotToggler.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
-      
-    
-
-
-
-
