@@ -96,6 +96,8 @@ function generateBotResponse(userMessage) {
         return 'When fraudulent activity is identified, the system takes immediate actions, including notifying the user and adding the account to balcklist';
     } else if (userMessage.includes('add an account')) {
         return 'Adding a new account. Please provide the details like User Id,Amount and account type';
+    } else if(userMessage.includes('user')){
+        return 'if a transaction is found fraud,user should immediately report the account and block it';
     } else {
         return 'I\'m sorry, I didn\'t understand that command.';
     }
