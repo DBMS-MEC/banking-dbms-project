@@ -78,7 +78,7 @@ function generateBotResponse(userMessage) {
         return 'Our fraud detection system employs algorithms that analyze patterns in user behavior, transaction history, and other relevant data to identify potential fraudulent activities and if detected as fraud they areadded to  blacklist.';
     } else if (userMessage.includes('transactions are fraud')) {
         return [
-            'Some kinds of transactions that are conidered as fraud if:',
+            'Some kind of transactions that are considered as fraud ,if:',
             '--> transaction amount is considered suspicious or fraudulent. ',
             '-->if the transaction is occurring on a weekend. ',
             '-->if multiple transactions occurs within a limited time.',
